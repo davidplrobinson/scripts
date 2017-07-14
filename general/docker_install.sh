@@ -1,6 +1,11 @@
-#/bin/bash
+#!/bin/bash
 
 # Tested and working on ubuntu. 
+
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
 
 apt-get update
 apt-get install -y --no-install-recommends linux-image-extra-$(uname -r) linux-image-extra-virtual
