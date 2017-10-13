@@ -11,7 +11,8 @@ chmod +x /tmp/docker-machine
 sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
 
 # get docker-machine-driver-kvm
-curl -L https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.10.0/docker-machine-driver-kvm-ubuntu16.04 > /usr/local/bin/docker-machine-driver-kvm 
+curl -L https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.10.0/docker-machine-driver-kvm-ubuntu16.04 >docker-machine-driver-kvm
+mv docker-machine-driver-kvm /usr/log/bin/
 chmod +x /usr/local/bin/docker-machine-driver-kvm
 
 # install kubectl
