@@ -3,7 +3,7 @@
 # install kvm
 sudo apt-get install -y libvirt-bin qemu-kvm
 sudo usermod -a -G libvirtd $(whoami)
-newgrp libvirtd
+#newgrp libvirtd
 
 # install docker
 curl -L https://github.com/docker/machine/releases/download/v0.12.2/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine
@@ -21,3 +21,7 @@ kubectl cluster-info
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.22.3/minikube-linux-amd64
 chmod +x minikube
 sudo mv minikube /usr/local/bin/
+
+echo
+echo *** You must logout and back in now... ***
+echo
