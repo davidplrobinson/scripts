@@ -23,5 +23,5 @@ chmod +x minikube
 sudo mv minikube /usr/local/bin/
 
 echo
-echo *** You must logout and back in now... ***
+echo You must logout and back in now...
 echo
