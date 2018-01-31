@@ -5,7 +5,6 @@ if [ "$EUID" -ne 0 ]
 	exit
 fi
 
-mkdir /mnt/data/datastores
 virsh pool-define ./kvm_datastore.xml
 virsh pool-start datastore_1
 virsh pool-autostart datastore_1

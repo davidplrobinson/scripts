@@ -9,3 +9,6 @@ apt-get update
 apt-get upgrade
 apt-get install -y ssh screen qemu-kvm libvirt-bin virtinst bridge-utils cpu-checker uuid
 kvm-ok
+
+mkdir /mnt/data/datastores
+mkdir /mnt/data/isos
