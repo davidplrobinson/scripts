@@ -1,0 +1,6 @@
+<pool type="dir">
+	<name>datastore_1</name>
+	<target>
+		<path>/mnt/data/datastores</path>
+	</target>
+</pool>
