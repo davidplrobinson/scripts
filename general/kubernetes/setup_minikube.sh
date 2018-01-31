@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
 # install kvm
 sudo apt-get install -y libvirt-bin qemu-kvm
 sudo usermod -a -G libvirtd $(whoami)
