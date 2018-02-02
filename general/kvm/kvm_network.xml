@@ -1,0 +1,6 @@
+<network>
+	<name>internalnet</name>
+	<bridge name="virbr100" />
+	<forward mode="route" />
+	<ip address="10.10.1.1" netmask="255.255.255.0" />
+</network>
