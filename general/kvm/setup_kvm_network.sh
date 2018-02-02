@@ -5,4 +5,8 @@ if [ "$EUID" -ne 0 ]
 	exit
 fi
 
-virsh net-create ./kvm_network.xml
+virsh net-define ./kvm_network.xml
+virsh net-autostart internalnet
+virsh net-start internalnet
+virsh net-list --all
+virsh net-info internalnet
