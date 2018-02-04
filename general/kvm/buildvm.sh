@@ -13,3 +13,4 @@ virt-install -n test-$randomid --ram=512 --vcpu=1 --disk pool=datastore_1,format
 	--console "pty,target_type=serial"
 
 virsh vncdisplay test-$randomid
+virsh list --all
