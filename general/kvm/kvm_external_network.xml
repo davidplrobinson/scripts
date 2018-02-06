@@ -1,0 +1,6 @@
+<network>
+	<name>externalnet</name>
+	<forward mode="bridge">
+		<interface dev="br37" />
+	</forward>
+</network>
