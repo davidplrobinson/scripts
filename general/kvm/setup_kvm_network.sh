@@ -5,7 +5,7 @@ if [ "$EUID" -ne 0 ]; then
 	exit
 fi
 
-virsh net-define ./kvm_network.xml
+virsh net-define ./kvm_internal_network.xml
 virsh net-autostart internalnet
 virsh net-start internalnet
 virsh net-list --all
