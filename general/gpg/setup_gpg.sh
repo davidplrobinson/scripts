@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ "$EUID" -ne 0 ]; then
-	echo "Please run as root"
+if [ "$EUID" -eq 0 ]; then
+	echo "Please DO NOT run as root"
 	exit
 fi
 
@@ -10,6 +10,9 @@ if [ ! -f ~/private.asc ]; then
 	exit
 fi
 
-apt-get update
-apt-get upgrade
-apt-get install -y gnupg2
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install -y gnupg2
+
+gpg --import /home/localadmin/private.asc
+gpg --list-keys
