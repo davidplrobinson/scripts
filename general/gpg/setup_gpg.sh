@@ -17,4 +17,6 @@ sudo apt-get install -y gnupg2
 gpg --import /home/localadmin/private.asc
 gpg --list-keys
 
-gpg -o test.txt -d test.txt.asx
+rm ~/private.asc
+
+gpg -d test.txt.asc
