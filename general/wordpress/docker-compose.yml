@@ -1,0 +1,17 @@
+wordpress:
+   image: wordpress:latest
+   links:
+      - wordpress_db:mysql
+   ports:
+      - 80:80
+   volumes:
+      - ./code:/code
+      - ./html:/var/www/html
+
+wordpress_db:
+   image: mariadb
+   environment: 
+      MYSQL_ROOT_PASSWORD: ChangeMe123
+      MYSQL_DATABASE: wordpress
+   volumes:
+      - ./database:/var/lib/mysql
