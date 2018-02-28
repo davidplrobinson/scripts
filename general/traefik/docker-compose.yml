@@ -1,0 +1,6 @@
+version: '2'
+
+services:
+  proxy:
+    image: traefik
+    command: --api --docker --docker.domain=docker.localhost --logLevel=DEBUG
