@@ -1,5 +1,3 @@
-version: '2'
-
 wordpress:
    image: wordpress:latest
    links:
