@@ -5,8 +5,8 @@ if [ "$EUID" -ne 0 ]; then
 	exit
 fi
 
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get -y update
+sudo apt-get -y upgrade
 
 apt-get install -y docker-compose
 docker-compose up -d
