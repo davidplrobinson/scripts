@@ -13,7 +13,8 @@ apt-get install -y --no-install-recommends apt-transport-https ca-certificates c
 #curl -fsSL https://apt.dockerproject.org/gpg | sudo apt-key add -
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 #add-apt-repository "deb https://apt.dockerproject.org/repo/ ubuntu-$(lsb_release -cs) main"
-add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+#add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) bionic test"
 apt-get update
 apt-get -y install docker-ce docker-compose
 curl -L "https://github.com/docker/compose/releases/download/1.10.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
