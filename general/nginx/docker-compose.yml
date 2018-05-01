@@ -1,0 +1,8 @@
+wordpress:
+   image: nginx
+   ports:
+      - 80:80
+   volumes:
+      - ./html:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/nginx.conf
+
