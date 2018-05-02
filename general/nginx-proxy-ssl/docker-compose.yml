@@ -11,3 +11,4 @@ nginx-proxy:
       - ./conf.d:/etc/nginx/conf.d
       - ./certs:/etc/nginx/certs:ro
       - /usr/share/nginx/vhost.d
+      - /var/run/docker.sock:/tmp/docker.sock:ro
