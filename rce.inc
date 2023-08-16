@@ -1,4 +1,3 @@
-<?php 
-echo gethostname();
-phpinfo();
+<PHP 
+echo "hello world";
 ?>
